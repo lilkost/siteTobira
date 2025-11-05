@@ -1,0 +1,30 @@
+@media (hover: hover) {
+    .footer__nav-link:hover,
+    .footer__item-link:hover,
+    .header__nav-item-link:hover,
+    .header__phone:hover,
+    a.footer__text:hover {
+        color: var(--color-orange);
+    }
+
+    .footer__files-item:hover{
+        .footer__files-item-name,
+        .footer__files-item-format{
+            color: var(--color-orange);
+        }
+
+        .footer__files-item-format{
+            opacity: .7;
+        }
+    }
+}
+
+@media (hover: none) {
+    .footer__nav-link:active,
+    .footer__item-link:active,
+    .header__nav-item-link:active,
+    .header__phone:active,
+    a.footer__text:active {
+        color: var(--color-orange);
+    }
+}

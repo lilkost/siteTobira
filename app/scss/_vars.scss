@@ -1,0 +1,30 @@
+:root {
+    --ff: "Inter", sans-serif;
+
+    // ==== colors ====
+    --color-brown: #584e4a;
+    --color-dark: #292321;
+    --color-orange: #ef8d68;
+    --color-gray: #d2cfc4; 
+    --color-brown-light: #7d7672;
+
+    // ==== size ====
+    --container-width: 94.79vw;
+    --container-padding: 0.78vw;
+
+    --size-50: 2.60vw;
+    --size-34: 1.77vw;
+    --size-28: 1.46vw;
+    --size-24: 1.25vw;
+    --size-21: 1.09vw;
+    --size-20: 1.04vw;
+    --size-18: 0.94vw;
+    --size-16: 0.83vw;
+    --size-14: 0.73vw;
+
+
+    // ==== transition ====
+    --time: 300ms;
+    --fn: linear;
+    --transition: var(--time) var(--fn);
+}
