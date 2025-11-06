@@ -43,3 +43,29 @@ export const createSlider = () => {
         });
     }
 }
+
+export const mainSlider = () => {
+    const mainSliderNode = document.querySelectorAll(".main-slider");
+
+    if(!mainSliderNode) return;
+
+    mainSliderNode.forEach(slider=>{
+        const swiper = new Swiper(slider, {
+            direction: 'horizontal',
+            loop: false,
+            speed: 200,
+            slidesPerView: 3,
+            spaceBetween: 20,
+
+            scrollbar: {
+                el: slider.querySelector(".main-slider__scrollbar"),
+                hide: false,
+                draggable: true,
+            },
+            navigation: {
+                nextEl:slider.querySelector(".main-slider__slider-btn_next"),
+                prevEl:slider.querySelector(".main-slider__slider-btn_prev")
+            },
+        });
+    });
+}
