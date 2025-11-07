@@ -548,6 +548,50 @@
                 </div>
             </div>
         </footer>
+        
+        <div class="modal modal-parent modal-order">
+            <div class="modal__inner">
+                <button class="modal__btn-close" type="button" aria-label="Закрыть модальное окно">
+                    <svg width="27" height="27" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="16.8685" y1="5.55476" x2="5.55476" y2="16.8685" stroke="#271E1B" stroke-width="2" />
+                        <line x1="17.0714" y1="16.8673" x2="5.75774" y2="5.55355" stroke="#271E1B" stroke-width="2" />
+                    </svg>
+                </button>
+                <strong class="modal__title">Заказать</strong>
+                <p class="modal__description">Оформите заказ мы перезвоним и согласуем все детали.</p>
+                <from class="modal__form">
+                    <fieldset class="modal__col">
+                        <label for="" class="modal__label">
+                            <input type="text" class="modal__input modal__input-required" placeholder="Имя *" required>
+                            <p class="form__error-message">Поле обязательно для заполнения</p>
+                        </label>
+                        <label for="" class="modal__label">
+                            <input type="text" class="modal__input modal__input-required input-phone-mask" placeholder="Телефон *" required>
+                            <p class="form__error-message">Поле обязательно для заполнения</p>
+                        </label>
+                        <label for="" class="modal__label">
+                            <input type="text" class="modal__input" placeholder="Город">
+                            <p class="form__error-message">Поле обязательно для заполнения</p>
+                        </label>
+                        <label for="" class="modal__label">
+                            <input type="text" class="modal__input" placeholder="Эл. почта">
+                            <p class="form__error-message">Поле обязательно для заполнения</p>
+                        </label>
+                        <label for="" class="modal__label">
+                            <textarea class="modal__textarea" name="" id="" placeholder="Коммантарий"></textarea>
+                        </label>
+                    </fieldset>
+                    <label for="modalCheck" class="modal__form-checkout">
+                        <input type="checkbox" name="" id="modalCheck">
+                        <div class="modal__form-checkout-decor"></div>
+                        <p class="modal__form-checkout-text">Я согласен на <a href="#!">обработнку персональных данных</a></p>
+                    </label>
+                    <button class="modal__form-btn btn" type="submit">
+                        Оформить заказ
+                    </button>
+                </from>
+            </div>
+        </div>
     </div>
 
 

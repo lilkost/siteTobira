@@ -122,6 +122,7 @@ function sripts () {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/swiper/swiper-bundle.min.js',
         'node_modules/simplebar/dist/simplebar.min.js',
+        'node_modules/imask/dist/imask.min.js',
         'app/js/main.js',
     ])
     .pipe(concat('main.min.js'))

@@ -4,7 +4,7 @@ export const detailFilter = () =>{
     const filterTop = document.querySelector(".detail__filter-top");
     const currentActiveBtn = document.querySelector(".detail__filter-button.is-active");
 
-    if(!filterButton || !filterBody) return;
+    if(!filterButton || !filterBody || !filterTop) return;
 
     const setPositionLine = (btn) =>{
         let left = btn.offsetLeft ? btn.offsetLeft : 0;

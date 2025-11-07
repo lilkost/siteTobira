@@ -1,4 +1,5 @@
 @media (hover: hover) {
+
     .footer__nav-link:hover,
     .footer__item-link:hover,
     .header__nav-item-link:hover,
@@ -9,23 +10,26 @@
         color: var(--color-orange);
     }
 
-    .footer__files-item:hover{
+    .footer__files-item:hover {
+
         .footer__files-item-name,
-        .footer__files-item-format{
+        .footer__files-item-format {
             color: var(--color-orange);
         }
 
-        .footer__files-item-format{
+        .footer__files-item-format {
             opacity: .7;
         }
     }
+
     .main-slider__slider-btn:hover {
         opacity: 0.8;
     }
-    .catalog__filter-accordion-top:hover{
+
+    .catalog__filter-accordion-top:hover {
         color: var(--color-dark);
 
-        .catalog__filter-accordion-top-icon svg line{
+        .catalog__filter-accordion-top-icon svg line {
             stroke: var(--color-dark);
         }
     }
@@ -33,12 +37,24 @@
     .btn:hover {
         opacity: 0.8;
     }
+
     .detail__filter-button:hover {
         color: var(--color-dark);
+    }
+
+    .modal__btn-close:hover {
+        svg line {
+            stroke: var(--color-orange);
+        }
+    }
+
+    .modal__form-checkout-text:hover a {
+        color: var(--color-orange);
     }
 }
 
 @media (hover: none) {
+
     .footer__nav-link:active,
     .footer__item-link:active,
     .header__nav-item-link:active,
@@ -48,21 +64,34 @@
     .breadcrumbs__item a:active {
         color: var(--color-orange);
     }
+
     .main-slider__slider-btn:active {
         opacity: 0.8;
     }
-    .catalog__filter-accordion-top:active{
+
+    .catalog__filter-accordion-top:active {
         color: var(--color-dark);
 
-        .catalog__filter-accordion-top-icon svg line{
+        .catalog__filter-accordion-top-icon svg line {
             stroke: var(--color-dark);
         }
     }
+
     .btn:active {
         opacity: 0.8;
     }
 
     .detail__filter-button:active {
         color: var(--color-dark);
+    }
+
+    .modal__btn-close:active {
+        svg line {
+            stroke: var(--color-orange);
+        }
+    }
+
+    .modal__form-checkout-text:active a {
+        color: var(--color-orange);
     }
 }
