@@ -51,6 +51,18 @@
     .modal__form-checkout-text:hover a {
         color: var(--color-orange);
     }
+
+    .contact__item-link:hover {
+        color: var(--color-orange);
+    }
+    .contact__item.btn-callback:hover {
+        background-color: var(--color-orange);
+
+        .contact__item-title,
+        .contact__item-text{
+            color: white;
+        }
+    }
 }
 
 @media (hover: none) {
@@ -93,5 +105,18 @@
 
     .modal__form-checkout-text:active a {
         color: var(--color-orange);
+    }
+
+    .contact__item-link:active {
+        color: var(--color-orange);
+    }
+
+    .contact__item.btn-callback:active {
+        background-color: var(--color-orange);
+        
+        .contact__item-title,
+        .contact__item-text{
+            color: white;
+        }
     }
 }

@@ -14,6 +14,12 @@ export const createModal = () =>{
             document.querySelector(".modal-order .modal__btn-close"), 
             "is-open",
         ],
+        [
+            document.querySelectorAll('.btn-callback'), 
+            document.querySelector(".modal-callback"), 
+            document.querySelector(".modal-callback .modal__btn-close"), 
+            "is-open",
+        ],
     ]
 
     // функция открытия модального окна
