@@ -3,7 +3,7 @@
         <a class="header__logo" href="/">
             <img src="img/logo.png" alt="Тобира лого">
         </a>
-        <nav class="header__nav">
+        <nav class="header__nav" data-da=".mobile-menu, 480, first">
             <ul class="header__nav-list">
                 <li class="header__nav-item">
                     <a class="header__nav-item-link" href="#!">Каталог</a>
@@ -19,6 +19,13 @@
                 </li>
             </ul>
         </nav>
-        <a class="header__phone" href="tel:+79376009600"> +7 937 600 96 00</a>
+        <a class="header__phone" href="tel:+79376009600" data-da=".mobile-menu, 480, last"> +7 937 600 96 00</a>
+        <button class="header__btn-burger">
+            <span class="header__btn-burger-line"></span>
+            <span class="header__btn-burger-line"></span>
+            <span class="header__btn-burger-line"></span>
+        </button>
     </div>
 </header>
+
+<div class="mobile-menu"></div>

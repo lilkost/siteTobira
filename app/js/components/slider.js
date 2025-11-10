@@ -11,9 +11,10 @@ export const createSlider = () => {
                 slidesPerView: 1,
                 effect: "fade",
                 speed: 500,
+
                 pagination: {
                     el: '.banner__slider-pagination',
-                    type: 'bullets',
+                    // type: 'bullets',
                     clickable: true,
                 },
             }

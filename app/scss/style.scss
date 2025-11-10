@@ -83,6 +83,32 @@
         @include transition(color);
     }
 }
+.header__btn-burger{
+    display: none;
+}
+.mobile-menu {
+    max-width: 100vw;
+    width: 100%;
+    height: 100svh;
+
+    position: fixed;
+    top: var(--top);
+    left: -200vw;
+    z-index: 10;
+
+    background-color: var(--color-brown);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.is-open {
+        left: 0;
+    }
+
+    transition: left var(--transition);
+}
 
 // ==== footer ====
 .footer {
@@ -303,6 +329,14 @@
     a.footer__text {
         @include transition(color);
     }
+
+    &__big-logo {
+        max-width: 17.188vw;
+        width: 100%;
+
+        object-position: center;
+        object-fit: contain;
+    }
 }
 
 .main {
@@ -329,8 +363,8 @@
     // .banner__slide-inner
 
     &__slide-inner {
-        // min-height: 100vh;
-        min-height: 945px; // удалить удалить удалить удалить удалить 
+        min-height: 100vh;
+        // min-height: 945px; // удалить удалить удалить удалить удалить 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -359,6 +393,11 @@
     &__slide-title-icon {
         position: relative;
         top: -1vw;
+
+        svg {
+            width: 2.5vw;
+            height: 2.5vw;
+        }
     }
 
     // .banner__slider-controls
@@ -391,6 +430,20 @@
 
             &.swiper-pagination-bullet-active {
                 background-color: var(--color-orange);
+            }
+
+            position: relative;
+            cursor: pointer;
+            flex-shrink: 0;
+
+            &::before {
+                content: "";
+                width: 110%;
+                height: 110%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -1521,13 +1574,13 @@
 
         padding: 1.56vw 2.08vw;
 
-        max-height: 
+        max-height:
             calc(100svh - (var(--container-padding) * 2));
         ;
 
         overflow-y: scroll;
-        
-        &::-webkit-scrollbar{
+
+        &::-webkit-scrollbar {
             display: none;
         }
     }
@@ -1965,12 +2018,12 @@
         min-height: 8vw;
 
         background-color: #fff;
-    
-        &.btn-callback{
+
+        &.btn-callback {
             @include transition(background-color);
 
             .contact__item-title,
-            .contact__item-text{
+            .contact__item-text {
                 @include transition(color);
             }
 
