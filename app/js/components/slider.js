@@ -67,6 +67,14 @@ export const mainSlider = () => {
                 nextEl:slider.querySelector(".main-slider__slider-btn_next"),
                 prevEl:slider.querySelector(".main-slider__slider-btn_prev")
             },
+            breakpoints: {
+                481:{
+                    slidesPerView: 3,
+                },
+                280:{
+                    slidesPerView: 1,
+                }
+            }
         });
     });
 }
