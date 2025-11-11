@@ -360,6 +360,14 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+
+
+        &.swiper-slide-active{
+            .banner__slide-title{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
     }
 
     // .banner__slide-inner
@@ -388,6 +396,11 @@
 
         padding-left: 0.47vw;
         margin-bottom: 2.81vw;
+
+        transition: opacity 800ms var(--fn), transform 800ms var(--fn);
+
+        opacity: 0.4;
+        transform: translateX(10vw);
     }
 
     // .banner__slide-title-icon

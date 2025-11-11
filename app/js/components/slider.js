@@ -9,14 +9,23 @@ export const createSlider = () => {
                 direction: 'horizontal',
                 loop: true,
                 slidesPerView: 1,
-                effect: "fade",
-                speed: 500,
+                spaceBetween: 10,
+
+                autoplay: {
+                    delay: 5000,
+                },
+
+                speed: 700,
 
                 pagination: {
                     el: '.banner__slider-pagination',
-                    // type: 'bullets',
                     clickable: true,
                 },
+
+                // effect: 'fade',
+                // fadeEffect: {
+                //     crossFade: true,
+                // },
             }
         ],
     ]
