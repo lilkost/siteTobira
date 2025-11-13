@@ -352,7 +352,7 @@
 
     .card__img {
         height: auto;
-        aspect-ratio: 1 / 1.2;
+        aspect-ratio: 1 / 1.5;
         margin-bottom: 2.13vw;
     }
 
@@ -398,25 +398,25 @@
 
     .card__name,
     .card__price {
-        // font-size: 4.80vw;
+        font-size: 4.80vw;
+    }
+
+    .card__name,
+    .card__description {
+        margin-bottom: 3vw;
     }
 
     .card__description {
         font-size: var(--size-16);
     }
 
-    .card__name,
-    .card__description {
-        margin-bottom: 2vw;
-    }
-
     .card__new,
     .card__id {
-        font-size: var(--size-14);
+        font-size: 2.5vw;
     }
 
     .card__info {
-        padding: 1vw;
+        padding: 1.5vw;
     }
 
     .card__new {
@@ -424,8 +424,8 @@
     }
 
     .catalog__section:not(:last-child) {
-        padding-bottom: 5vw;
-        margin-bottom: 5vw;
+        padding-bottom: 8.53vw;
+        margin-bottom: 8.53vw;
     }
 
     .catalog_mb {
@@ -687,21 +687,15 @@
 
     .contact__list {
         grid-template-columns: 1fr;
+        grid-gap: 4.2vw;
+        margin-bottom: 8.53vw;
     }
 
     .contact__item {
-        gap: 5vw;
+        gap: 7vw;
         border-radius: 1vw;
-        padding: 3.04vw;
+        padding: 4vw;
         min-height: auto;
-    }
-
-    .contact__list {
-        grid-gap: 3vw;
-    }
-
-    .contact__list {
-        margin-bottom: 5vw;
     }
 
     .contact {
@@ -889,6 +883,7 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        font-size: 3.73vw;
 
         br {
             display: none;
@@ -944,8 +939,10 @@
         gap: 4vw;
         margin-top: 0;
         margin-bottom: 6.40vw;
-        overflow-y: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
         padding-bottom: 1px;
+        height: 8vw;
 
         &::-webkit-scrollbar {
             display: none;
@@ -957,7 +954,8 @@
     }
 
     .detail__filter-top::before {
-        height: 2px;
+        height: 1px;
+        bottom: 0;
     }
 
     .detail__filter-body-item img {
@@ -966,5 +964,28 @@
 
     .new-detail__top {
         margin-bottom: 8.53vw;
+    }
+
+    .section-top:has(.title) .breadcrumbs {
+        margin-bottom: 8.53vw;
+    }
+
+    .section-top:has(.title) {
+        margin-bottom: 6.40vw;
+    }
+
+
+    .catalog__section-title {
+        font-size: 8.53vw;
+        margin-bottom: 6.40vw;
+    }
+
+    .contact__item-title {
+        font-size: 3.73vw;
+    }
+
+    .contact__item-link,
+    .contact__item-text {
+        font-size: 4.80vw;
     }
 }
