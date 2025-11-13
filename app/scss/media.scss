@@ -252,7 +252,7 @@
         max-width: 100%;
         width: 100%;
         padding: 0;
-        gap: 7vw;
+        gap: 6.4vw;
     }
 
     .about__info {
@@ -342,7 +342,7 @@
     }
 
     .footer__files {
-        margin-bottom: 3vw;
+        margin-bottom: 10vw;
     }
 
     .card__list {
@@ -525,14 +525,14 @@
     }
 
     .detail__info-title {
-        font-size: 8.53vw;
+        font-size: 4.80vw;
         margin-bottom: 6.40vw;
     }
 
     .detail__filter-body-title {
-        font-size: 4.80vw;
+        font-size: 3.73vw;
         padding-left: 4vw;
-        margin-bottom: 3.2vw;
+        margin-bottom: 6.4vw;
 
         &::before {
             width: 2.13vw;
@@ -573,7 +573,7 @@
 
     .modal__input {
         font-size: 3.73vw;
-        padding: 3vw 4vw;
+        padding: 4vw 5vw;
         border-radius: 40px;
     }
 
@@ -600,7 +600,7 @@
     }
 
     .modal__form-checkout {
-        margin-bottom: 4vw;
+        margin-bottom: 6.4vw;
     }
 
     .modal__btn-close {
@@ -896,7 +896,7 @@
     }
 
     .btn {
-        padding: 3.2vw;
+        padding: 4.3vw;
         font-size: 3.73vw;
     }
 
@@ -987,5 +987,9 @@
     .contact__item-link,
     .contact__item-text {
         font-size: 4.80vw;
+    }
+
+    .modal__form-checkout {
+        gap: 1vw;
     }
 }
