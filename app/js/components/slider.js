@@ -22,10 +22,10 @@ export const createSlider = () => {
                     clickable: true,
                 },
 
-                // effect: 'fade',
-                // fadeEffect: {
-                //     crossFade: true,
-                // },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
             }
         ],
     ]

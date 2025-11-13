@@ -80,17 +80,29 @@ export const createModal = () =>{
 
 export const validateForm = () => {
     const inputRequired = document.querySelectorAll(".modal__input-required");
+    const modalForm = document.querySelectorAll(".modal__form");
 
-    if(!inputRequired) return;
+    if (!inputRequired || !modalForm) return;
+
+    const changeState = (input) => {
+        if (input.value.length <= 0) {
+            input.parentElement.classList.add("input-error");
+        } else {
+            input.parentElement.classList.remove("input-error");
+        }
+    }
+
+    modalForm.forEach(form=>{
+        const btn = form.querySelector(".modal__form-btn");
+
+        btn.addEventListener("click", ()=>{
+            inputRequired.forEach(input => { changeState(input)});
+        });
+    });
 
     inputRequired.forEach(input=>{
         input.onblur = () =>{
-            console.log("onblur");
-            if(input.value.length <= 0) {
-                input.parentElement.classList.add("input-error");
-            } else {
-                input.parentElement.classList.remove("input-error");
-            }
+            changeState(input);
         }
         input.onfocus = () =>{
             console.log("onfocus");
@@ -99,11 +111,7 @@ export const validateForm = () => {
             }
         }
         input.addEventListener("input", ()=>{
-            if(input.value.length <= 0) {
-                input.parentElement.classList.add("input-error");
-            } else {
-                input.parentElement.classList.remove("input-error");
-            }
+            changeState(input);
         });
-    })
+    });
 }

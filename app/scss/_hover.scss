@@ -6,7 +6,8 @@
     .header__phone:hover,
     a.footer__text:hover,
     .catalog__filter-reset:hover,
-    .breadcrumbs__item a:hover {
+    .breadcrumbs__item a:hover,
+    .detail__info-link:hover {
         color: var(--color-orange);
     }
 
@@ -63,6 +64,9 @@
             color: white;
         }
     }
+        .main-slider__slide:hover .main-slider__slide-name{
+        color: var(--color-orange);
+    }
 }
 
 @media (hover: none) {
@@ -73,7 +77,8 @@
     .header__phone:active,
     a.footer__text:active,
     .catalog__filter-reset:active,
-    .breadcrumbs__item a:active {
+    .breadcrumbs__item a:active,
+    .detail__info-link:active {
         color: var(--color-orange);
     }
 
@@ -118,5 +123,8 @@
         .contact__item-text{
             color: white;
         }
+    }
+    .main-slider__slide:active .main-slider__slide-name{
+        color: var(--color-orange);
     }
 }

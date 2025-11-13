@@ -4,7 +4,9 @@ export const scrollingPage = () =>{
         mainMenu = document.querySelector(".mobile-menu")
 
     if(header && mainNode) {
-        mainNode.style.setProperty("--top", `${header.clientHeight}px`);
-        mainMenu.style.setProperty("--top", `${header.clientHeight}px`);
+        setTimeout(()=>{
+            mainNode.style.setProperty("--top", `${header.clientHeight}px`);
+            mainMenu.style.setProperty("--top", `${header.clientHeight}px`);
+        }, 200);
     };
 }
