@@ -9,7 +9,9 @@
 @mixin transition($st) {
     transition: $st var(--transition);
 }
-
+body.is-hidden{
+    overflow: hidden;
+}
 // ==== header ====
 .header {
     background-color: var(--color-brown);
@@ -21,6 +23,8 @@
         right: 0;
         left: 0;
         z-index: 10;
+
+        transition: top 200ms var(--fn);
     }
 
     &__inner {
@@ -503,7 +507,7 @@
         color: white;
         font-weight: 400;
 
-        letter-spacing: 0.03em;
+        letter-spacing: 0.04em;
         line-height: 113%;
     }
 
@@ -514,7 +518,7 @@
         color: #dcd9d0;
         font-weight: 300;
 
-        letter-spacing: 0.016em;
+        letter-spacing: 0.03em;
         line-height: 130%;
         padding-top: 0.26vw;
         padding-right: 0.42vw;
@@ -1472,6 +1476,7 @@
             height: max-content;
             transform: rotateX(0deg);
         }
+        
     }
 
     // .detail__filter-body
@@ -1544,6 +1549,8 @@
 
             object-position: center;
             object-fit: contain;
+
+            pointer-events: none;
         }
 
         cursor: pointer;
@@ -2124,4 +2131,12 @@
             border-radius: 0.52vw;
         }
     }
+}
+
+.detail__info-btn-filter{
+    display: none;
+}
+
+.detail__filter-parent-close{
+    display: none;
 }

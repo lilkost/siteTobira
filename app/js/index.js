@@ -8,6 +8,7 @@ import { createModal } from "./components/modal.js";
 import { phoneMask } from "./components/phoneMask.js";
 import { validateForm } from "./components/modal.js";
 import { mobileMenu } from './components/menuMobile.js';
+import { filterDetail } from './components/filterDetail.js';
 
 useDynamicAdapt();
 scrollingPage();
@@ -19,3 +20,4 @@ createModal();
 phoneMask();
 validateForm();
 mobileMenu();
+filterDetail();
