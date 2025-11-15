@@ -10,6 +10,7 @@ export const filterDetail = () =>{
 
     window.addEventListener("click",(event)=>{
         if(window.innerWidth > 480) return;
+
         
         const classCssValue = event.target?.classList?.value;
 

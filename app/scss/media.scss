@@ -510,7 +510,7 @@
 
     .detail__filter-body-list {
         --item-width: 20vw;
-        --gap: 6.40vw 8.53vw;
+        --gap: calc(var(--container-padding) * 3);
 
         display: grid;
         gap: var(--gap);
@@ -1096,7 +1096,6 @@
     }
 
     .detail__filter-parent-close {
-        content: "";
         position: absolute;
         top: 46svh;
         left: 50%;
@@ -1108,5 +1107,17 @@
 
         background-color: #fff;
         border-radius: 20px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: -43vw;
+            
+            max-width: 100vw;
+            width: 100vw;
+            height: 20vh;
+        }
     }
 }
