@@ -105,5 +105,38 @@ export const validateForm = () => {
                 input.parentElement.classList.remove("input-error");
             }
         });
-    })
+    });
+
+
+
+    if (document.querySelector(".modal__form")) {
+        document.querySelectorAll(".modal__form").forEach(form=>{
+            const btn = form.querySelector(".modal__form-btn");
+            const input = form.querySelector(".modal__form-checkout input");
+            
+            input.addEventListener("change", function() {
+                if (input.checked) {
+                    input.classList.remove("is-error");
+                } else {
+                    input.classList.add("is-error");
+                }
+            })
+            
+            btn.addEventListener("click", ()=>{
+                if (input.checked) {
+                    input.classList.remove("is-error");
+                } else {
+                    input.classList.add("is-error");
+                }
+
+                inputRequired.forEach(input => {
+                    if (input.value.length <= 0) {
+                        input.parentElement.classList.add("input-error");
+                    } else {
+                        input.parentElement.classList.remove("input-error");
+                    }
+                });
+            });
+        });
+    }
 }

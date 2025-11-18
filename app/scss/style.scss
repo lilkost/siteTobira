@@ -985,7 +985,7 @@
         overflow: hidden;
         transform-origin: top;
         will-change: transform;
-
+        --transition: 400ms linear;
         transition:
             transform var(--transition),
             height var(--transition),
@@ -1761,6 +1761,8 @@
             }
         }
 
+        resize: none;
+
         padding: 1.04vw 1.25vw;
         border-radius: 1.56vw;
 
@@ -2096,4 +2098,17 @@
             border-radius: 0.52vw;
         }
     }
+}
+
+.modal__form-checkout:has(input.is-error) .modal__form-checkout-decor{
+    border: 1px solid rgb(231, 28, 28);
+}
+
+.modal__label.input-error .form__error-message  {
+    display: none;
+}
+
+.modal__inner::-webkit-scrollbar,
+.modal-parent::-webkit-scrollbar{
+    display: none;
 }
