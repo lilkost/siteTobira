@@ -123,16 +123,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('touchstart', function(e) {
-    // Проверяем, кликнули ли мы на сам фильтр или его заголовок
-    const isFilterTop = e.target.closest('.detail__filter-top');
-    const isFilterBody = e.target.closest('.detail__filter-bodys');
+    // Проверяем, кликнули ли мы на элементы с собственной прокруткой
+    const isScrollableElement = e.target.closest('.detail__filter-bodys') || 
+                                e.target.closest('.detail__filter-top');
     
-    // Если кликнули не на фильтр - не начинаем перетаскивание
-    if (!isFilterTop && !isFilterBody) {
-        // Проверяем, кликнули ли мы вообще на фильтр
-        const clickedFilter = e.target.closest('.detail__filter');
-        if (!clickedFilter) return;
-    }
+    // Если кликнули на элемент с прокруткой - не начинаем перетаскивание
+    if (isScrollableElement) return;
+    
+    // Проверяем, кликнули ли мы вообще на фильтр (но не на его внутренние скроллящиеся части)
+    const clickedFilter = e.target.closest('.detail__filter');
+    if (!clickedFilter) return;
     
     if (!filterElement) return;
     
@@ -143,29 +143,44 @@ document.addEventListener('touchstart', function(e) {
     startHeight = (currentHeight / window.innerHeight) * 100;
     
     filterElement.style.transition = 'none';
+    
+    // console.log('Начало перетаскивания фильтра');
 }, { passive: true });
 
 document.addEventListener('touchmove', function(e) {
     if (!isDragging || !filterElement) return;
     
-    // Проверяем, движемся ли мы по вертикали достаточно для изменения высоты
-    const currentY = e.touches[0].clientY;
-    const deltaY = startY - currentY;
+    // Проверяем, не перемещаем ли мы палец по скроллящимся элементам
+    const isScrollableElement = e.target.closest('.detail__filter-bodys') || 
+                                e.target.closest('.detail__filter-top');
     
-    // Минимальный порог для начала изменения высоты (чтобы не блокировать мелкие движения)
-    if (Math.abs(deltaY) < 5) {
-        return; // Не блокируем нативную прокрутку при мелких движениях
+    // Если палец перемещается по скроллящемуся элементу - не блокируем
+    if (isScrollableElement) {
+        isDragging = false;
+        return;
     }
     
-    // Только если движение достаточно большое - блокируем прокрутку страницы
+    // Проверяем минимальное движение, чтобы случайно не блокировать мелкие касания
+    const currentY = e.touches[0].clientY;
+    const deltaY = Math.abs(startY - currentY);
+    
+    if (deltaY < 5) {
+        // Слишком маленькое движение - возможно это начало скролла
+        return;
+    }
+    
+    // Блокируем нативную прокрутку только для изменения высоты фильтра
     e.preventDefault();
     
-    const deltaVH = (deltaY / window.innerHeight) * 100;
+    const deltaYTotal = startY - currentY;
+    const deltaVH = (deltaYTotal / window.innerHeight) * 100;
     
     let newHeight = startHeight + deltaVH;
     newHeight = Math.max(20, Math.min(90, newHeight));
     
     filterElement.style.height = newHeight + 'vh';
+    
+    // console.log(`Новая высота: ${newHeight}vh`);
 }, { passive: false });
 
 document.addEventListener('touchend', function() {
@@ -188,61 +203,31 @@ document.addEventListener('touchend', function() {
     if(finalHeight <= 20){
         document.querySelector(".detail__filter-parent").classList.remove("is-open");
         filterElement.style.height = "70vh";
+        // console.log('Фильтр закрыт');
     }
+    
+    // console.log(`Фильтр установлен на ${finalHeight}vh`);
 }, { passive: true });
 
-// Дополнительно: предотвращаем клики на заднем фоне при закрытии
-document.querySelector('.detail__filter')?.addEventListener('click', function(e) {
+// ДОПОЛНИТЕЛЬНО: Обработка скролла внутри .detail__filter-bodys
+document.querySelector('.detail__filter-bodys')?.addEventListener('touchstart', function(e) {
+    // Разрешаем скролл внутри этого элемента
     e.stopPropagation();
-});
+}, { passive: true });
 
-// Альтернативный вариант: обработчик только для заголовка фильтра
+document.querySelector('.detail__filter-bodys')?.addEventListener('touchmove', function(e) {
+    // Разрешаем скролл внутри этого элемента
+    e.stopPropagation();
+}, { passive: true });
+
+// ДОПОЛНИТЕЛЬНО: Обработка скролла внутри .detail__filter-top
 document.querySelector('.detail__filter-top')?.addEventListener('touchstart', function(e) {
-    if (!filterElement) return;
-    
-    isDragging = true;
-    startY = e.touches[0].clientY;
-    
-    const currentHeight = parseFloat(getComputedStyle(filterElement).height);
-    startHeight = (currentHeight / window.innerHeight) * 100;
-    
-    filterElement.style.transition = 'none';
-    e.stopPropagation(); // Не даем событию всплыть к документу
+    // Разрешаем скролл внутри этого элемента
+    e.stopPropagation();
 }, { passive: true });
 
 document.querySelector('.detail__filter-top')?.addEventListener('touchmove', function(e) {
-    if (!isDragging || !filterElement) return;
-    
-    e.preventDefault();
-    
-    const currentY = e.touches[0].clientY;
-    const deltaY = startY - currentY;
-    const deltaVH = (deltaY / window.innerHeight) * 100;
-    
-    let newHeight = startHeight + deltaVH;
-    newHeight = Math.max(20, Math.min(90, newHeight));
-    
-    filterElement.style.height = newHeight + 'vh';
-}, { passive: false });
-
-document.querySelector('.detail__filter-top')?.addEventListener('touchend', function() {
-    if (!isDragging) return;
-    
-    isDragging = false;
-    
-    if (!filterElement) return;
-    
-    filterElement.style.transition = 'height 0.3s ease';
-    
-    const currentHeight = parseFloat(getComputedStyle(filterElement).height);
-    const currentHeightVH = (currentHeight / window.innerHeight) * 100;
-    
-    const finalHeight = Math.max(20, Math.min(90, currentHeightVH));
-    filterElement.style.height = finalHeight + 'vh';
-
-    if(finalHeight <= 20){
-        document.querySelector(".detail__filter-parent").classList.remove("is-open");
-        filterElement.style.height = "70vh";
-    }
+    // Разрешаем скролл внутри этого элемента
+    e.stopPropagation();
 }, { passive: true });
 }
