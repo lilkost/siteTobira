@@ -165,7 +165,7 @@ document.addEventListener('touchmove', function(e) {
     let newHeight = startHeight + deltaVH;
     newHeight = Math.max(20, Math.min(90, newHeight));
     
-    filterElement.style.height = newHeight + 'svh';
+    filterElement.style.height = newHeight + 'vh';
 }, { passive: false });
 
 document.addEventListener('touchend', function() {
@@ -183,11 +183,11 @@ document.addEventListener('touchend', function() {
     
     // Только корректируем если вышли за пределы
     const finalHeight = Math.max(20, Math.min(90, currentHeightVH));
-    filterElement.style.height = finalHeight + 'svh';
+    filterElement.style.height = finalHeight + 'vh';
 
     if(finalHeight <= 20){
         document.querySelector(".detail__filter-parent").classList.remove("is-open");
-        filterElement.style.height = "70svh";
+        filterElement.style.height = "70vh";
     }
 }, { passive: true });
 
@@ -222,7 +222,7 @@ document.querySelector('.detail__filter-top')?.addEventListener('touchmove', fun
     let newHeight = startHeight + deltaVH;
     newHeight = Math.max(20, Math.min(90, newHeight));
     
-    filterElement.style.height = newHeight + 'svh';
+    filterElement.style.height = newHeight + 'vh';
 }, { passive: false });
 
 document.querySelector('.detail__filter-top')?.addEventListener('touchend', function() {
@@ -238,12 +238,11 @@ document.querySelector('.detail__filter-top')?.addEventListener('touchend', func
     const currentHeightVH = (currentHeight / window.innerHeight) * 100;
     
     const finalHeight = Math.max(20, Math.min(90, currentHeightVH));
-    filterElement.style.height = finalHeight + 'svh';
+    filterElement.style.height = finalHeight + 'vh';
 
     if(finalHeight <= 20){
         document.querySelector(".detail__filter-parent").classList.remove("is-open");
-        filterElement.style.height = "70svh";
+        filterElement.style.height = "70vh";
     }
 }, { passive: true });
-
 }
