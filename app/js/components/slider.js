@@ -56,7 +56,7 @@ export const createSlider = () => {
             const swiper = new Swiper(node, options);
         }
         else {
-            console.error("Ошибка генерации слайдера");
+            // console.error("Ошибка генерации слайдера");
         }
     }
     // вызов конструктора для слайдеров
@@ -69,7 +69,7 @@ export const createSlider = () => {
                 createSlider(sliderNode, sliderOptions);
             }
             else { // опционально лучще выключить при окончании разработки чтобы в консоли не было лишних сообщений
-                console.error(`Ошибка генерации, нету одной из двух частей слайдера: slider - ${sliderNode}, список опций - ${sliderOptions}`)
+                // console.error(`Ошибка генерации, нету одной из двух частей слайдера: slider - ${sliderNode}, список опций - ${sliderOptions}`)
             }
         });
     }

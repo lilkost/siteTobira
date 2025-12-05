@@ -2182,3 +2182,16 @@ body.is-hidden {
 .detail__filter-parent-close {
     display: none;
 }
+
+.detail__filter-body-title{
+    display: flex;
+}
+
+.detail__filter {
+    transition: height 300ms linear;
+    will-change: height;
+}
+
+.detail__filter-p{
+    width: 100%;
+}
