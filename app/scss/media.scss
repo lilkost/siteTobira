@@ -353,7 +353,8 @@
     }
 
     .footer {
-        padding-bottom: 7vw;
+        // padding-bottom: 7vw;
+        padding-bottom: 0;
     }
 
     .footer__files {
@@ -777,7 +778,7 @@
 
     .main-info__title {
         line-height: 130%;
-        font-size: 4vw;
+        font-size: 4.27vw;
     }
 
     .main-info__text,
@@ -1300,7 +1301,8 @@
     .footer__item-address{
         margin-top: 2vw;
     }
-    .main-slider__slide-name {
-        display: none;
+
+    .catalog__title{
+        letter-spacing: 0;
     }
 }
