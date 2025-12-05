@@ -46,11 +46,23 @@
                             <picture class="detail__info-picture">
                                 <img src="img/detail/1.png" alt="">
                             </picture>
+                            <button class="detail__info-btn-filter btn btn_red" type="button">
+                                Выбрать модель и материал
+                                <div class="detail__info-btn-filter-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M2.50261 5.83398C2.04236 5.83398 1.66927 6.20708 1.66927 6.66732C1.66927 7.12755 2.04236 7.50065 2.50261 7.50065L13.3359 7.50065L13.3359 9.16732C13.3359 9.62757 13.709 10.0007 14.1693 10.0007C14.6295 10.0007 15.0026 9.62757 15.0026 9.16732L15.0026 7.50065L17.5026 7.50065C17.9628 7.50065 18.3359 7.12755 18.3359 6.66732C18.3359 6.20709 17.9628 5.83399 17.5026 5.83399L15.0026 5.83399L15.0026 4.16732C15.0026 3.70709 14.6295 3.33399 14.1693 3.33399C13.709 3.33399 13.3359 3.70709 13.3359 4.16732L13.3359 5.83398L2.50261 5.83398ZM18.3359 13.334C18.3359 12.8737 17.9628 12.5007 17.5026 12.5007L6.66927 12.5007L6.66927 10.834C6.66927 10.3737 6.29619 10.0007 5.83594 10.0007C5.37569 10.0007 5.00261 10.3737 5.00261 10.834L5.0026 12.5007L2.50261 12.5007C2.04236 12.5007 1.66927 12.8737 1.66927 13.334C1.66927 13.7942 2.04235 14.1673 2.5026 14.1673L5.0026 14.1673L5.0026 15.834C5.0026 16.2942 5.37569 16.6673 5.83594 16.6673C6.29619 16.6673 6.66927 16.2942 6.66927 15.834L6.66927 14.1673L17.5026 14.1673C17.9628 14.1673 18.3359 13.7942 18.3359 13.334Z"
+                                            fill="black" />
+                                    </svg>
+                                </div>
+                            </button>
                             <div class="detail__info-box">
-                            <p class="detail__info-price">34 490 ₽</p>
+                                <p class="detail__info-price">34 490 ₽</p>
                                 <div class="detail__info-row">
                                     <button class="detail__info-btn btn-order btn" type="button">Оформить заказ</button>
-                                    <button class="detail__info-btn btn-phone btn-callback btn" type="button">Заказать звонок</button>
+                                    <button class="detail__info-btn btn-phone btn" type="button">Заказать
+                                        звонок</button>
                                 </div>
                                 <ul class="detail__info-characteristics">
                                     <li class="detail__info-characteristics-item">
@@ -78,136 +90,118 @@
                             </div>
                         </div>
                         <!-- right -->
-                        <div class="detail__filter">
-                            <div class="detail__filter-top">
-                                <button class="detail__filter-button is-active" type="button" data-type="type1">Модель</button>
-                                <button class="detail__filter-button" type="button" data-type="type2">Материал и
-                                    цвет</button>
-                                <button class="detail__filter-button" type="button" data-type="type3">Стекло</button>
-                                <button class="detail__filter-button" type="button" data-type="type4">Оформление
-                                    портала</button>
-                            </div>
-                            <div class="detail__filter-bodys">
-                                <div class="detail__filter-body is-active" data-type="type1">
-                                    <div class="detail__filter-body-section">
-                                        <h3 class="detail__filter-body-title">
-                                            Без остекления <span>8513 Матовый классический серый</span>
-                                        </h3>
-                                        <div class="detail__filter-body-list">
-                                            <label for="c1" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c1">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c2" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c2">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c3" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c3">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c4" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c4">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c5" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c5">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c6" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c6">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c7" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c7">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c8" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c8">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="detail__filter-body-section">
-                                        <h3 class="detail__filter-body-title">
-                                            С остеклением
-                                        </h3>
-                                        <div class="detail__filter-body-list">
-                                            <label for="c10" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c10">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c11" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c11">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c12" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c12">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                        </div>
-                                    </div>
+                        <div class="detail__filter-parent detail-filter-close">
+                            <button class="detail__filter-parent-close detail-filter-close" type="button" aria-label="Декоротивный эллемент для закрытия элемента на мобильном устройстве"></button>
+                            <div class="detail__filter" data-simplebar
+                                    data-simplebar-auto-hide="false">
+                                <div class="detail__filter-top">
+                                    <button class="detail__filter-button is-active" type="button"
+                                        data-type="type1">Модель</button>
+                                    <button class="detail__filter-button" type="button" data-type="type2">Материал и
+                                        цвет</button>
+                                    <button class="detail__filter-button" type="button"
+                                        data-type="type3">Стекло</button>
+                                    <button class="detail__filter-button" type="button" data-type="type4">Оформление
+                                        портала</button>
                                 </div>
-                                <div class="detail__filter-body" data-type="type2">
-                                    <div class="detail__filter-body-section">
-                                        <h3 class="detail__filter-body-title">
-                                            Материал и цвет
-                                        </h3>
-                                        <div class="detail__filter-body-list">
-                                            <label for="c13" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c13">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c14" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c14">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c15" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c15">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
+                                <div class="detail__filter-bodys">
+                                    <div class="detail__filter-body is-active" data-type="type1">
+                                        <div class="detail__filter-body-section">
+                                            <h3 class="detail__filter-body-title">
+                                                Без остекления <span>8513 Матовый классический серый</span>
+                                            </h3>
+                                            <div class="detail__filter-body-list">
+                                                <label for="c1" class="detail__filter-body-item">
+                                                    <input type="radio" name="c1" id="c1">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c2" class="detail__filter-body-item">
+                                                    <input type="radio" name="c1" id="c2">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c3" class="detail__filter-body-item">
+                                                    <input type="radio" name="c1" id="c3">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c4" class="detail__filter-body-item">
+                                                    <input type="radio" name="c1" id="c4">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="detail__filter-body-section">
+                                            <h3 class="detail__filter-body-title">
+                                                С остеклением
+                                            </h3>
+                                            <div class="detail__filter-body-list">
+                                                <label for="c5" class="detail__filter-body-item">
+                                                    <input type="radio" name="c2" id="c5">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c6" class="detail__filter-body-item">
+                                                    <input type="radio" name="c2" id="c6">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c7" class="detail__filter-body-item">
+                                                    <input type="radio" name="c2" id="c7">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c8" class="detail__filter-body-item">
+                                                    <input type="radio" name="c2" id="c8">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="detail__filter-body" data-type="type3">
-                                    <div class="detail__filter-body-section">
-                                        <h3 class="detail__filter-body-title">
-                                            Стекло
-                                        </h3>
-                                        <div class="detail__filter-body-list">
-                                            <label for="c16" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c16">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c17" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c17">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c18" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c18">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
+                                    <div class="detail__filter-body" data-type="type2">
+                                        <div class="detail__filter-body-section">
+                                            <h3 class="detail__filter-body-title">
+                                                Материал и цвет
+                                            </h3>
+                                            <div class="detail__filter-body-list">
+                                                <label for="c77" class="detail__filter-body-item">
+                                                    <input type="radio" name="c33" id="c77">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c88" class="detail__filter-body-item">
+                                                    <input type="radio" name="c33" id="c88">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="detail__filter-body" data-type="type4">
-                                    <div class="detail__filter-body-section">
-                                        <h3 class="detail__filter-body-title">
-                                            Оформление портала
-                                        </h3>
-                                        <div class="detail__filter-body-list">
-                                            <label for="c19" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c19">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c20" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c20">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
-                                            <label for="c21" class="detail__filter-body-item">
-                                                <input type="checkbox" name="" id="c21">
-                                                <img src="img/detail/2.png" alt="">
-                                            </label>
+                                    <div class="detail__filter-body" data-type="type3">
+                                        <div class="detail__filter-body-section">
+                                            <h3 class="detail__filter-body-title">
+                                                Стекло
+                                            </h3>
+                                            <div class="detail__filter-body-list">
+                                                <label for="c9" class="detail__filter-body-item">
+                                                    <input type="radio" name="c4" id="c9">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c10" class="detail__filter-body-item">
+                                                    <input type="radio" name="c4" id="c10">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail__filter-body" data-type="type4">
+                                        <div class="detail__filter-body-section">
+                                            <h3 class="detail__filter-body-title">
+                                                Оформление портала
+                                            </h3>
+                                            <div class="detail__filter-body-list">
+                                                <label for="c11" class="detail__filter-body-item">
+                                                    <input type="radio" name="c5" id="c11">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                                <label for="c12" class="detail__filter-body-item">
+                                                    <input type="radio" name="c5" id="c12">
+                                                    <img src="img/detail/2.png" alt="">
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

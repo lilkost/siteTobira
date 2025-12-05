@@ -5,5 +5,7 @@ export const mobileMenu = () =>{
     burgerBtn.addEventListener("click", ()=>{
         burgerBtn.classList.toggle("is-active");
         mobileMenu.classList.toggle("is-open");
+        
+        document.querySelector("body").classList.toggle("is-hidden");
     });
 }

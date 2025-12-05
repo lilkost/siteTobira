@@ -6,7 +6,8 @@
     .header__phone:hover,
     a.footer__text:hover,
     .catalog__filter-reset:hover,
-    .breadcrumbs__item a:hover {
+    .breadcrumbs__item a:hover,
+    .detail__info-link:hover {
         color: var(--color-orange);
     }
 
@@ -55,13 +56,50 @@
     .contact__item-link:hover {
         color: var(--color-orange);
     }
+
     .contact__item.btn-callback:hover {
         background-color: var(--color-orange);
 
         .contact__item-title,
-        .contact__item-text{
+        .contact__item-text {
             color: white;
         }
+    }
+
+    .main-slider__slide:hover {
+        .main-slider__slide-name {
+            color: var(--color-orange);
+        }
+
+        .main-slider__slide-picture img {
+            transform: scale(1.02);
+        }
+    }
+
+    .about__creator-icon:hover {
+        rect {
+            fill: rgb(199 113 81);
+        }
+    }
+
+    .catalog__filter-accordion:hover {
+        .catalog__filter-accordion-body {
+            height: max-content;
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
+
+        .catalog__filter-accordion-top {
+            color: var(--color-dark);
+        }
+
+        .catalog__filter-accordion-top-icon svg line {
+            stroke: var(--color-dark);
+        }
+    }
+
+    .catalog__section-item:hover .catalog__section-item-img img{
+        transform: scale(1.02);
     }
 }
 
@@ -73,7 +111,8 @@
     .header__phone:active,
     a.footer__text:active,
     .catalog__filter-reset:active,
-    .breadcrumbs__item a:active {
+    .breadcrumbs__item a:active,
+    .detail__info-link:active {
         color: var(--color-orange);
     }
 
@@ -113,10 +152,30 @@
 
     .contact__item.btn-callback:active {
         background-color: var(--color-orange);
-        
+
         .contact__item-title,
-        .contact__item-text{
+        .contact__item-text {
             color: white;
         }
+    }
+
+    .main-slider__slide:active {
+        .main-slider__slide-name {
+            color: var(--color-orange);
+        }
+
+        .main-slider__slide-picture img {
+            transform: scale(1.02);
+        }
+    }
+
+    .about__creator-icon:hover {
+        rect {
+            fill: rgb(199 113 81);
+        }
+    }
+
+    .catalog__section-item:hover .catalog__section-item-img img{
+        transform: scale(1.02);
     }
 }

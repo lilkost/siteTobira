@@ -62,7 +62,7 @@ button {
 	font-size: var(--size-50);
 	font-weight: 500;
 	line-height: 100%;
-	letter-spacing: 0.04em;
+	letter-spacing: 0em;
 
 	&_light {
 		color: #fff;
@@ -162,6 +162,7 @@ button {
 		width: 100%;
 
 		position: absolute;
+		z-index: 3;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -202,6 +203,7 @@ button {
 		width: 100%;
 		height: 29.9vw;
 		margin-bottom: 1.04vw;
+		overflow: hidden;
 
 		img {
 			max-width: 100%;
@@ -210,6 +212,7 @@ button {
 
 			object-fit: cover;
 			object-position: center;
+			transition: transform 300ms linear;
 		}
 	}
 

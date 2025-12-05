@@ -9,7 +9,7 @@ export const createSlider = () => {
                 direction: 'horizontal',
                 loop: true,
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 0,
 
                 autoplay: {
                     delay: 5000,
@@ -20,12 +20,33 @@ export const createSlider = () => {
                 pagination: {
                     el: '.banner__slider-pagination',
                     clickable: true,
+                    bulletClass: 'swiper-pagination-bullet',
+                    bulletActiveClass: 'swiper-pagination-bullet-active',
                 },
 
-                // effect: 'fade',
-                // fadeEffect: {
-                //     crossFade: true,
-                // },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                simulateTouch: true,
+                allowTouchMove: true,
+                shortSwipes: true,
+                longSwipes: true,
+                // Добавьте обработчики событий
+                on: {
+                    init: function () {
+                        this.pagination.bullets.forEach((bullet, index) => {
+                            bullet.style.pointerEvents = 'auto';
+                            bullet.addEventListener('click', () => {
+                                this.slideTo(index);
+                            });
+                        });
+                    },
+                    slideChange: function () {
+                        // Обновляем состояние пагинации
+                        this.pagination.update();
+                    }
+                }
             }
         ],
     ]
