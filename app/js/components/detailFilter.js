@@ -109,7 +109,8 @@ export const detailFilter = () => {
 //     }
 // }, { passive: true });
 
-    let isDragging = false;
+if(window.innerWidth>480) return;
+let isDragging = false;
 let startY = 0;
 let startHeight = 70;
 let filterElement = null;
