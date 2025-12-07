@@ -2209,3 +2209,8 @@ body.is-hidden {
 .header__phone-mobile{
     display: none;
 }
+
+body:has(.mobile-menu.is-open) .header.header_fixed.is-blur {
+    backdrop-filter: blur(0);
+    background-color: rgba(88, 78, 74, 1);
+}
